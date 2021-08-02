@@ -1,0 +1,238 @@
+@main("Hello") {
+<section id="content">
+  <div class="wrapper doc">
+    <article>
+      <h1></h1>
+    </article>
+
+  </div>
+</section>
+<script>
+ function Fonction1() {
+		// Les données sous format Json ()
+        var master1bigdata = [
+            {'#': '1', 'IDE': '000001',
+                'NOM': 'Diaw', 'PRENOM': 'Aliou'
+            },
+            {'#': '2', 'IDE': '000002',
+                'NOM': 'Tall', 'PRENOM': 'Masamba'
+            },
+            {'#': '3', 'IDE': '000003',
+                'NOM': 'Kobor', 'PRENOM': 'Djibi'
+            }
+            
+
+        ]
+        var master2bigdata = [
+            {'#': '1', 'IDE': '000011',
+                'NOM': 'Deme', 'PRENOM': 'Matar'
+            },
+            {'#': '2', 'IDE': '000012',
+                'NOM': 'Samba', 'PRENOM': 'Ngom'
+            },
+            {'#': '3', 'IDE': '000013',
+                'NOM': 'Cisse', 'PRENOM': 'Fadel'
+            }
+
+        ]
+        var master1AI = [
+            {'#': '1', 'IDE': '000021',
+                'NOM': 'Samb', 'PRENOM': 'Racky'
+            },
+            {'#': '2', 'IDE': '000022',
+                'NOM': 'Magueye', 'PRENOM': 'Mbothiee'
+            },
+            {'#': '3', 'IDE': '000033',
+                'NOM': 'Ba', 'PRENOM': 'Djenaba'
+            }
+
+        ]
+        var master2AI = [
+            {'#': '1', 'IDE': '000031',
+                'NOM': 'Sana', 'PRENOM': 'Mouhamad'
+            },
+            {'#': '2', 'IDE': '0000032',
+                'NOM': 'Mboy', 'PRENOM': 'Demba'
+            },
+            {'#': '3', 'IDE': '000033',
+                'NOM': 'khadija', 'PRENOM': 'Sene'
+            }
+
+        ]
+        
+        var laclass=document.getElementById("nivetude").value;
+        if (laclass="Master 1") {
+          fil.innerHTML=="Big Data Analytics";
+          niv.innerHTML=="Master 1";
+          var donnee = master1bigdata;
+        }
+        if (laclass="Master 2") {
+          fil.innerHTML=="Big Data Analytics";
+          niv.innerHTML=="Master 2";
+          var donnee = master2bigdata;
+        }
+        if (laclass="Master1") {
+          fil.innerHTML=="Intelligence Artificielle";
+          niv.innerHTML=="Master 1";
+          var donnee = master1AI;
+        }
+        if (laclass="Master2") {
+          fil.innerHTML=="Intelligence Artificielle";
+          niv.innerHTML=="Master 2";
+          var donnee = master2AI;
+        }
+
+        // Extraction des Valeurs 
+        // ('#', 'Ide', 'NOM' and 'PRENOM')
+        
+        var col = [];
+        for (var i = 0; i < donnee.length; i++) {
+            for (var key in donnee[i]) {
+                if (col.indexOf(key) === -1) {
+                    col.push(key);
+                }
+            }
+        }
+
+        // Créer le tablau
+        var table = document.createElement("table");
+
+        // Créer le header du tableau
+        var tr = table.insertRow(-1);                   // table row.
+
+        for (var i = 0; i < col.length; i++) {
+            var th = document.createElement("th");      // table header.
+            th.innerHTML = col[i];
+            tr.appendChild(th);
+        }
+
+        // ajouter les données dans les celllules du tableau
+        for (var i = 0; i < donnee.length; i++) {
+
+            tr = table.insertRow(-1);
+
+            for (var j = 0; j < col.length; j++) {
+                var tabCell = tr.insertCell(-1);
+                tabCell.innerHTML = donnee[i][col[j]];
+            }
+        }
+
+      
+        var divShowData = document.getElementById('showData');
+        divShowData.innerHTML = "";
+        divShowData.appendChild(table);
+
+  
+
+  //Ecriture
+       
+
+}
+</script>
+<style>
+table, td, th {
+  border: 1px solid rgb(255, 255, 255);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+</style>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="../../webapp/css/default.css">
+</head>
+<body>
+<!-- Inclure Scala.js compiled code -->
+<script type="text/javascript" src="./target/scala-2.13/scala-js-tutorial-fastopt/main.js"></script>
+<nav class="navbar navbar-inverse" style="background-color:#2980B9; height: 75px; ">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" ><p style="color: cornsilk;"> School-Gess</p></a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="Interface" style="color: cornsilk;">HOME</a></li>
+     
+    </ul>
+
+  </div>
+</nav>
+<section >
+  <p style="margin-left: 550px;">Liste des étudiants par Classe</p>
+  <div style="background-color:
+  #6495ed;
+   width: 600px;
+   height: 50px;
+   margin-left: 350px;
+   display: flex;">
+    <form method="POST" action="" style=" flex: 1;
+    padding: 1em; margin-left: 100px;">
+      <label>Choisir CLasse</label>
+      <select name="cars" id="nivetude">
+        <optgroup label="Big Data Analytics">
+          <option value="Master 1">Master 1</option>
+          <option value="Master 2">Master 2</option>
+        </optgroup>
+        <optgroup label="Intelligence Artificielle">
+          <option value="Master1">Master1</option>
+          <option value="Master2">Master2</option>
+        </optgroup>
+      </select>
+     </form>
+     <div style=" flex: 1;
+     padding: 1em;">
+    <input type="submit" value="Submit" onClick="Fonction1();">
+  </div>
+   </div>
+<div style="display: flex; width:500px; margin-left: 500px;" >
+  <div style=" flex: 1;
+  padding: 1em;"><p id="fil">Filiére</p></div>
+  <div style=" flex: 1;
+  padding: 1em;" ><p id="niv">Niveau</p></div>
+  
+</div>
+</section>
+<table class="table" style="margin-top: 30px; width: 800px; margin-left: 275px;" >
+  <thead class="thead-dark" style="background-color: #2980B9;" id ="showData">
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">IDE</th>
+    <th scope="col">NOM</th>
+    <th scope="col">PRENOM</th>
+  </tr>
+
+  </thead>
+    
+</table>
+
+
+
+<!-- Footer -->
+<footer style="position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background-color:#2980B9;
+    color: white;
+    text-align: center;">
+  <!-- Copyright -->
+  <div class="text-center p-3">
+    © 2021 Copyright:Ousmane Dia
+
+  </div>
+  <!-- Copyright -->
+</footer>
+
+
+<!-- Footer -->
+</body>
+</html>
+}

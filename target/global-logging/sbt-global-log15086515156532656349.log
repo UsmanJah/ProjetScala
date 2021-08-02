@@ -1,0 +1,15 @@
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(fastLinkJS, Some(c7ca3e00-ea05-454c-b6fa-e6467d8428ae), Some(CommandSource(console0)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mEvaluating tasks: Compile / fastLinkJS[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mExporting web-assets:scala-js-tutorial[0m
+[0m[[0m[0minfo[0m] [0m[0mFast optimizing /home/ousmanealhayri/monprojetscala/target/scala-2.13/scala-js-tutorial-fastopt[0m
+[0m[[0m[31merror[0m] [0m[0mReferring to non-existent class play.core.server.ProdServerStart[0m
+[0m[[0m[31merror[0m] [0m[0m  called from core module module initializers[0m
+[0m[[0m[31merror[0m] [0m[0mReferring to non-existent method static play.core.server.ProdServerStart.main([java.lang.String)void[0m
+[0m[[0m[31merror[0m] [0m[0m  called from core module module initializers[0m
+[0m[[0m[0mdebug[0m] [0m[0mGlobal IR cache stats: reused: 84 -- invalidated: 0 -- trees read: 0[0m
+[0m[[0m[31merror[0m] [0m[0mThere were linking errors[0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mfastLinkJS[0m) There were linking errors[0m
+[0m[[0m[31merror[0m] [0m[0mTotal time: 0 s, completed Jul 29, 2021, 4:40:49 PM[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(shell, None, None)[0m
+[0m[[0m[0minfo[0m] [0m[0mshutting down sbt server[0m

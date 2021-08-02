@@ -1,0 +1,53 @@
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(run, Some(8cb95aa0-cabe-4c11-846c-c83b79e77376), Some(CommandSource(console0)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mEvaluating tasks: Compile / run[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to /home/ousmanealhayri/monprojetscala/target/scala-2.13/classes ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mExporting web-assets:monprojetscala[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mshutting down sbt server[0m
+[0m[[0m[0mdebug[0m] [0m[0mForcing garbage collection...[0m
+[0m[[0m[31merror[0m] [0m[0mjava.io.IOException: Illegal seek[0m
+[0m[[0m[31merror[0m] [0m[0m	at java.base/java.io.FileInputStream.available0(Native Method)[0m
+[0m[[0m[31merror[0m] [0m[0m	at java.base/java.io.FileInputStream.available(FileInputStream.java:330)[0m
+[0m[[0m[31merror[0m] [0m[0m	at play.sbt.PlayConsoleInteractionMode$InputStreamWrapper.read(PlayInteractionMode.scala:65)[0m
+[0m[[0m[31merror[0m] [0m[0m	at jline.internal.NonBlockingInputStream.read(NonBlockingInputStream.java:245)[0m
+[0m[[0m[31merror[0m] [0m[0m	at jline.internal.InputStreamReader.read(InputStreamReader.java:258)[0m
+[0m[[0m[31merror[0m] [0m[0m	at jline.internal.InputStreamReader.read(InputStreamReader.java:195)[0m
+[0m[[0m[31merror[0m] [0m[0m	at jline.console.ConsoleReader.readCharacter(ConsoleReader.java:2180)[0m
+[0m[[0m[31merror[0m] [0m[0m	at jline.console.ConsoleReader.readCharacter(ConsoleReader.java:2170)[0m
+[0m[[0m[31merror[0m] [0m[0m	at play.sbt.PlayConsoleInteractionMode$.waitEOF$1(PlayInteractionMode.scala:100)[0m
+[0m[[0m[31merror[0m] [0m[0m	at play.sbt.PlayConsoleInteractionMode$.$anonfun$waitForKey$2(PlayInteractionMode.scala:111)[0m
+[0m[[0m[31merror[0m] [0m[0m	at play.sbt.PlayConsoleInteractionMode$.$anonfun$doWithoutEcho$1(PlayInteractionMode.scala:118)[0m
+[0m[[0m[31merror[0m] [0m[0m	at play.sbt.PlayConsoleInteractionMode$.$anonfun$doWithoutEcho$1$adapted(PlayInteractionMode.scala:115)[0m
+[0m[[0m[31merror[0m] [0m[0m	at play.sbt.PlayConsoleInteractionMode$.withConsoleReader(PlayInteractionMode.scala:94)[0m
+[0m[[0m[31merror[0m] [0m[0m	at play.sbt.PlayConsoleInteractionMode$.doWithoutEcho(PlayInteractionMode.scala:115)[0m
+[0m[[0m[31merror[0m] [0m[0m	at play.sbt.PlayConsoleInteractionMode$.$anonfun$waitForKey$1(PlayInteractionMode.scala:111)[0m
+[0m[[0m[31merror[0m] [0m[0m	at play.sbt.PlayConsoleInteractionMode$.$anonfun$waitForKey$1$adapted(PlayInteractionMode.scala:98)[0m
+[0m[[0m[31merror[0m] [0m[0m	at play.sbt.PlayConsoleInteractionMode$.withConsoleReader(PlayInteractionMode.scala:94)[0m
+[0m[[0m[31merror[0m] [0m[0m	at play.sbt.PlayConsoleInteractionMode$.waitForKey(PlayInteractionMode.scala:98)[0m
+[0m[[0m[31merror[0m] [0m[0m	at play.sbt.PlayConsoleInteractionMode$.waitForCancel(PlayInteractionMode.scala:122)[0m
+[0m[[0m[31merror[0m] [0m[0m	at play.sbt.run.PlayRun$.$anonfun$playRunTask$3(PlayRun.scala:123)[0m
+[0m[[0m[31merror[0m] [0m[0m	at play.sbt.run.PlayRun$.$anonfun$playRunTask$3$adapted(PlayRun.scala:67)[0m
+[0m[[0m[31merror[0m] [0m[0m	at scala.Function1.$anonfun$compose$1(Function1.scala:49)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.internal.util.$tilde$greater.$anonfun$$u2219$1(TypeFunctions.scala:62)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.std.Transform$$anon$4.work(Transform.scala:68)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.Execute.$anonfun$submit$2(Execute.scala:282)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.internal.util.ErrorHandling$.wideConvert(ErrorHandling.scala:23)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.Execute.work(Execute.scala:291)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.Execute.$anonfun$submit$1(Execute.scala:282)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.ConcurrentRestrictions$$anon$4.$anonfun$submitValid$1(ConcurrentRestrictions.scala:265)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.CompletionService$$anon$2.call(CompletionService.scala:64)[0m
+[0m[[0m[31merror[0m] [0m[0m	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)[0m
+[0m[[0m[31merror[0m] [0m[0m	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)[0m
+[0m[[0m[31merror[0m] [0m[0m	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)[0m
+[0m[[0m[31merror[0m] [0m[0m	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)[0m
+[0m[[0m[31merror[0m] [0m[0m	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)[0m
+[0m[[0m[31merror[0m] [0m[0m	at java.base/java.lang.Thread.run(Thread.java:829)[0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mrun[0m) java.io.IOException: Illegal seek[0m
+[0m[[0m[31merror[0m] [0m[0mTotal time: 608 s (10:08), completed Jul 27, 2021, 6:03:14 PM[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(shell, None, None)[0m
+[0m[[0m[0minfo[0m] [0m[0msbt server started at local:///home/ousmanealhayri/.sbt/1.0/server/3b078c1e182d9751f558/sock[0m
+[0m[[0m[0mdebug[0m] [0m[0mWriting bsp connection file[0m
+[0m[[0m[0minfo[0m] [0m[0mstarted sbt server[0m

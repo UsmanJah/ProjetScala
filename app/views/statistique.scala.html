@@ -1,0 +1,261 @@
+@main("Hello") {
+  <html>
+    <head> 
+        <!--Ici commence le premier chart
+        
+        <script src="chart.js-3.5.0/package/dist/chart.js"></script>
+      -->
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.0/chart.min.js  "></script>
+    <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="../../webapp/css/default.css">
+    </head>
+   
+    <body >
+      <nav class="navbar navbar-inverse" style="background-color:#2980B9; height: 75px; ">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" ><p style="color: cornsilk;"> School-Gess</p></a>
+            </div>
+            <ul class="nav navbar-nav">
+              <li><a href="Interface" style="color: cornsilk;">HOME</a></li>
+                
+            </ul>
+    
+        </div>
+    </nav>
+    <!-- Include Scala.js compiled code -->
+<div style="width: 1000px; height: 500px; margin-left: 150px;">
+<script type="text/javascript" src="./target/scala-2.13/scala-js-tutorial-fastopt/main.js"></script>
+
+        
+        <div style="display: flex;">
+         <!--Ici commence le premier chart-->
+            <div style="flex: 1; 
+            padding: 1em; width: 100px; height: 100px;">
+            <p style="margin-left: 100px;">Représentation de la moyenne par Classe</p>
+         <canvas id="myChart" width="300" height="300" style="display: block; box-sizing: border-box; height: 1262px; width: 1262px;"></canvas>
+          <script>
+            
+            var ctx = document.getElementById('myChart');
+            var ctx = 'myChart';
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ['Master 1 : Big Data', 'Master 2 :Big Data', 'Master 1: IA', 'Master 2:IA'],
+        datasets: [{
+            label: '# of Votes',
+            data: [13, 16, 14, 17],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)'
+                
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)'
+                
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+
+        
+          </script>
+            </div>
+
+     <!--Ici commence le second chart-->     
+            <div style="flex: 1; 
+            padding: 1em;">
+             <p style="margin-left: 100px;">Représentation de la moyenne par Matiére</p>
+              <canvas id="marksChart" width="" height=""></canvas>
+              <script>
+                  var marksCanvas = document.getElementById("marksChart");
+  
+  
+  var marksData = {
+    labels: ["Optimisation Contiinue", "Programmation Fonctionnelle", "UMl", "Statistique", "Big Data"],
+    datasets: [{
+      label: "Master 1: Big Data",
+      backgroundColor: "transparent",
+      borderColor: "rgba(200,0,0,0.6)",
+      fill: false,
+      radius: 6,
+      pointRadius: 6,
+      pointBorderWidth: 3,
+      pointBackgroundColor: "orange",
+      pointBorderColor: "rgba(200,0,0,0.6)",
+      pointHoverRadius: 10,
+      data: [14, 15, 16, 17, 13]
+    }, {
+      label: "Master 2: Big Data",
+      backgroundColor: "transparent",
+      borderColor: "rgba(0,0,200,0.6)",
+      fill: false,
+      radius: 6,
+      pointRadius: 6,
+      pointBorderWidth: 3,
+      pointBackgroundColor: "cornflowerblue",
+      pointBorderColor: "rgba(0,0,200,0.6)",
+      pointHoverRadius: 10,
+      data: [12, 18, 19, 13, 20]
+    },
+    {
+      label: "Master 1: IA",
+      backgroundColor: "transparent",
+      borderColor: "rgba(0,0,200,0.6)",
+      fill: false,
+      radius: 6,
+      pointRadius: 6,
+      pointBorderWidth: 3,
+      pointBackgroundColor: "cornflowerblue",
+      pointBorderColor: "rgba(0,0,200,0.6)",
+      pointHoverRadius: 10,
+      data: [13, 14, 16, 17, 14]
+    },{
+    label: "Master 2: IA",
+      backgroundColor: "transparent",
+      borderColor: "rgba(0,0,200,0.6)",
+      fill: false,
+      radius: 6,
+      pointRadius: 6,
+      pointBorderWidth: 3,
+      pointBackgroundColor: "cornflowerblue",
+      pointBorderColor: "rgba(0,0,200,0.6)",
+      pointHoverRadius: 10,
+      data: [13, 14, 16, 17, 15]
+    }]
+  };
+  
+  var chartOptions = {
+    scale: {
+      ticks: {
+        beginAtZero: true,
+        min: 0,
+        max: 100,
+        stepSize: 20
+      },
+      pointLabels: {
+        fontSize: 18
+      }
+    },
+    legend: {
+      position: 'left'
+    }
+  };
+  
+  var radarChart = new Chart(marksCanvas, {
+    type: 'radar',
+    data: marksData,
+    options: chartOptions
+  });
+              </script>
+     
+           
+            </div>
+        </div>
+
+
+
+
+        <div style="display: flex;">
+ <!--Ici commence le troisiéme chart-->
+            <div style="flex: 1; 
+            padding: 1em; width: 200px; height: 200px;">
+            <p style="margin-left: 100px;">Fais pour éviter un espace vide</p>
+            <canvas id="birdsChart" width="" height=""></canvas>
+            
+            <script> 
+              var birdsCanvas = document.getElementById("birdsChart");
+
+var birdsData = {
+    labels: ['Master 1 : Big Data', 'Master 2 :Big Data', 'Master 1: IA', 'Master 2:IA'],
+  datasets: [{
+    data: [13, 16, 14, 17],
+    backgroundColor: [
+      "rgba(255, 0, 0, 0.5)",
+      "rgba(100, 255, 0, 0.5)",
+      "rgba(200, 50, 255, 0.5)",
+      "rgba(0, 100, 255, 0.5)"
+    ]
+  }]
+};
+
+var polarAreaChart = new Chart(birdsCanvas, {
+  type: 'polarArea',
+  data: birdsData
+});
+            </script>
+          
+            </div>
+             <!--Ici commence le quatriéme chart-->
+            <div style="flex: 1; 
+            padding: 1em;">
+            <p style="margin-left: 100px;">Représentation des taux d'échec et de réussite</p>
+            <canvas id="doughnut-chart" width="" height=""></canvas>
+            
+            <script>
+                new Chart(document.getElementById("doughnut-chart"), {
+    type: 'doughnut',
+    data: {
+      labels: ["Taux d'échec", "Taux de réussite"],
+      datasets: [
+        {
+          label: "Population (millions)",
+          backgroundColor: ["#3e95cd", "#8e5ea2"],
+          data: [10,90]
+        }
+      ]
+    },
+    options: {
+      title: {
+        display: true,
+        text: 'Predicted world population (millions) in 2050'
+      }
+    }
+});
+            </script>
+            
+           
+            </div>
+        </div>
+<!-- Footer -->
+<footer style="position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background-color:#2980B9;
+    color: white;
+    text-align: center;">
+    <!-- Copyright -->
+    <div class="text-center p-3">
+        © 2021 Copyright: Ousmanae Dia
+
+    </div>
+    <!-- Copyright -->
+</footer>
+</div>
+
+<!-- Footer -->
+
+    </body>
+</html>
+}

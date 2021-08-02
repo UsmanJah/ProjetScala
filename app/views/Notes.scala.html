@@ -1,0 +1,289 @@
+@main("Hello") {
+<section id="content">
+  <div class="wrapper doc">
+    <article>
+      <h1></h1>
+    </article>
+
+  </div>
+</section>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="../../webapp/css/default.css">
+  <style>
+    label
+{
+	display: block;
+	width: 150px;
+	float: left;
+}
+  </style>
+<script type="text/javascript" >
+
+function identification ()   {
+          var nom=document.getElementById("nom").value.toUpperCase();
+          var prenom=document.getElementById("prenom").value;
+          var ine=document.getElementById("ine").value;
+          document.getElementById("Prenom").innerHTML=prenom ; 
+          document.getElementById("Nom").innerHTML=nom;
+          document.getElementById("ide").innerHTML=ine;
+}
+function clickSurEffacer () {          
+          document.getElementById("nom").value="";
+          document.getElementById("prenom").value="";
+          document.getElementById("ine").value="";
+          
+          document.getElementById("reset").innerHTML="Effacé";
+
+}
+function affichageDansLeTableau () {
+
+var noteDevoir=parseFloat(document.getElementById("nd").value);
+var noteProjet=parseFloat(document.getElementById("np").value);
+var noteExamen=parseFloat(document.getElementById("ne").value);
+var Matiere=document.getElementById("matiere").value;
+var moyenneFinale=( (((noteDevoir+noteProjet)/2)+(noteExamen))/2);
+
+var Credit=document.getElementById("nc").value;
+var tab= document.getElementById("lignetab");
+var ligne=tab.insertRow();
+var matiere=ligne.insertCell(0);
+var moy=ligne.insertCell(1);
+var nbCredits=ligne.insertCell(2);
+var mention=ligne.insertCell(3);
+matiere.innerHTML=Matiere;
+moy.innerHTML=moyenneFinale;
+nbCredits.innerHTML = Credit;
+     
+
+if (moyenneFinale < 5) {
+
+mention.innerHTML = "FAIBLE";
+document.getElementById("ment").innerHTML = "<strong>FAIBLE</strong>";
+}
+else if (moyenneFinale < 10) {
+
+mention.innerHTML = "INSUFFISANT";
+document.getElementById("ment").innerHTML = "<strong>INSUFFISANT</strong>";
+}
+else if (moyenneFinale < 12) {
+mention.innerHTML = "PASSABLE";
+document.getElementById("ment").innerHTML = "<strong>PASSABLE</strong>";
+
+}
+else if (moyenneFinale < 14) {
+mention.innerHTML = "ASSEZ BIEN";
+document.getElementById("ment").innerHTML = "<strong>ASSEZ BIEN</strong>";  
+
+}
+else if (moyenneFinale < 16) {
+mention.innerHTML = "BIEN";
+document.getElementById("ment").innerHTML = "<strong>BIEN</strong>";  
+
+
+}
+else if (moyenneFinale < 18) {
+mention.innerHTML = "TRES BIEN";
+document.getElementById("ment").innerHTML = "<strong>TRES BIEN</strong>"; 
+
+
+}
+else if (moyenneFinale <= 20) {
+mention.innerHTML = "EXCELLENT";
+document.getElementById("ment").innerHTML = "<strong>EXCELLENT</strong>"; 
+  
+  
+}
+else {
+mention.innerHTML="";
+}
+
+
+
+
+
+}
+
+
+
+
+
+
+</script>
+
+
+
+
+
+</head>
+<body style="background-color:#e6f3ff; height: 1000px;" >
+<!-- Inclure Scala.js compile code -->
+<script type="text/javascript" src="./target/scala-2.13/scala-js-tutorial-fastopt/main.js"></script>
+<nav class="navbar navbar-inverse" style="background-color:#2980B9; height: 75px; ">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" ><p style="color: cornsilk;"> School-Gess</p></a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="Interface" style="color: cornsilk;">HOME</a></li>
+      
+    </ul>
+
+  </div>
+</nav>
+
+<section>
+  <h4 style="margin-left: 500px;">Calculer les notes d'un étudiants</h4>
+  <div style="background-color:
+ #6495ed;
+  width: 1000px;
+  height: 400px;
+  margin-left: 175px;">
+ 
+      
+
+     <div  style="display: flex;">
+      <div style="flex: 1;
+      padding: 1em;">
+<!-- Formulaire 1-->
+<form name="form1">
+  <fieldset>
+    <legend>Informations de l'étudiant</legend>
+    <label>Nom:</br></label>
+    <input type="text" required="required" placeholder="mettez le nom en MAJUSCULE" id="nom" ></br></br></br>
+    <label>Prenom :</br></label>
+    <input type="text" required="required" placeholder="mettez votre prenom ici" id="prenom" ></br></br></br>
+   
+    <label>IDE :</br></label>
+    <input type="text" required="required" placeholder="mettez votre ine ici" id="ine" ></br></br></br>
+  </fieldset>
+</form> <br>
+<button type="button" class="btn btn-success" id="submit"  onClick="identification()">Valider</button>
+<button type="button" class="btn btn-light" id="reset" onClick="clickSurEffacer()">Effacer</button>
+
+      </div>
+      <div style="flex: 1;
+      padding: 1em;">
+ <!--Formulaire2-->
+<form name="form2">
+  <fieldset>
+  <legend> Saisie des notes</legend>
+  <label>Matiére</br></label>
+  <select id="matiere" placeholder="Veuillez choisir la matière">
+      <option value="Programmation fonctionnelle avancée">Programmation fonctionnelle avancée</option>
+      <option value="Optimisation">Méthodes d'Optimisation pour la Gestion</option>
+      <option value="Analyse MAthématique">Comptabilité Analytique</option>
+      <option value="Machine Learning">Sociologie des Organisations</option>
+      <option value="Modélisation UML">Introduction au Marketing</option>
+      <option value="Anglais">Anglais</option>
+      <option value="Statistique">Analyse Conception et Systèmes d'information</option>
+ </select></br></br>
+ <label>Nombre de crédits :</br></label>
+ <input type="number" id="nc"></br></br>
+ <label>Note devoir 1:</br></label>
+ <input type="number" min="0" max="20" required="required" placeholder="entrer votre note de devoir" id="nd"></br></br>
+ <label>Note devoir 2:</br></label>
+ <input type="number" min="0" max="20" placeholder="entrer votre note de projet" id="np"></br></br> 
+ <label>Note examen :</br></label>
+ <input type="number" min="0" max="20" required="required" placeholder="entrer votre note d'examen" id="ne"></br></br> 
+ </fieldset>
+</form>
+<a href="#t">
+<button type="submit" class="btn btn-success" id="submit"  onClick="affichageDansLeTableau()">Envoyer</button>
+</a>
+</td>
+
+      </div>
+
+
+
+     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="checkbox">
+
+       
+    </form>
+  </div>
+</section>
+
+<section style="margin-top: 50px; ">
+  <div style="display: flex;width: 800px; margin-left: 350px;" >
+    <div style="flex: 1;
+padding: 1em;">
+      <h4 id="Nom">Nom</h4>
+    </div>
+    <div style="flex: 1;
+padding: 1em;">
+      <h4 id="Prenom">Prenom</h4>
+    </div>
+    <div style="flex: 1;
+padding: 1em;">
+      <h4 id="ide">IDE</h4>
+    </div>
+   
+  </div>
+  <div id="t">
+  <table  class="table table-hover table-dark" style="margin-top: 30px; width: 800px; margin-left: 275px;" >
+    <thead class="thead-dark">
+        <tr>
+            <th>Matière</th>
+            <th>Moyenne  Semestrielle</th>
+            <th>Nombre de crédits</th>
+            <th>Mention</th>
+        </tr>
+    </thead>
+    <tbody id="lignetab"></tbody>
+  </table>
+</div>
+</section>
+
+
+
+<!-- Footer -->
+<footer style="position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background-color:#2980B9;
+    color: white;
+    text-align: center;">
+  <!-- Copyright -->
+  <div class="text-center p-3">
+    © 2021 Copyright:Ousmane Dia
+
+  </div>
+  <!-- Copyright -->
+</footer>
+
+
+<!-- Footer -->
+</body>
+</html>
+<section id="content">
+  <div class="wrapper doc">
+    <article>
+      <h1></h1>
+    </article>
+
+  </div>
+</section>
+}

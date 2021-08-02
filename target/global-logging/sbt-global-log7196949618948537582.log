@@ -1,0 +1,4 @@
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(__stopWatch network-1, None, None)[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(shell, None, None)[0m
+[0m[[0m[0minfo[0m] [0m[0msbt server started at local:///home/ousmanealhayri/.sbt/1.0/server/3b078c1e182d9751f558/sock[0m
+[0m[[0m[0mdebug[0m] [0m[0mWriting bsp connection file[0m

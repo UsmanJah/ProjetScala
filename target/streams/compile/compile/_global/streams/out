@@ -1,0 +1,7 @@
+[0m[[0m[31merror[0m] [0m[0m/home/ousmanealhayri/monprojetscala/app/views/Notes.scala.html:1:1: '{' expected.[0m
+[0m[[0m[31merror[0m] [0m[0m@main("Hello") {[0m
+[0m[[0m[31merror[0m] [0m[0m^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/ousmanealhayri/monprojetscala/app/views/statistique.scala.html:1:1: '{' expected.[0m
+[0m[[0m[31merror[0m] [0m[0m@main("Hello") {[0m
+[0m[[0m[31merror[0m] [0m[0m^[0m
+[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m
