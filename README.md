@@ -3,8 +3,8 @@ Lecture:
 Télècharger le dossier;
 ouvrir avec votre "cmd".
 cd "chemin d'accés">sbt>run et
-Ouvrir le http://localhost:9000/
-Description
+Ouvrir le http://localhost:9000/</br>
+Description</br>
 Dans un établissement scolaire, nous voulons créer une application qui permettra de faire la gestion de l'emploi du temps des cours et des notes des étudiants. Nous avons les entités suivants :
 
 Professeur(idProfesseur, nomProfesseur, prenomPro, grade)
