@@ -1,4 +1,4 @@
-# ScalaWepp and Play Framework
+# ScalaWebApp and Play Framework
 Lecture:
 Télècharger le dossier;
 ouvrir avec votre "cmd".
