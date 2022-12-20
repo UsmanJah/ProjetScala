@@ -1,4 +1,4 @@
-# ProjetScala
+# ScalaWepp and Play Framework
 Lecture:
 Télècharger le dossier;
 ouvrir avec votre "cmd".
